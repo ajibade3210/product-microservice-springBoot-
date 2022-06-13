@@ -6,6 +6,4 @@ spring:
     name: Product Microservice
   data:
     mongodb:
-      host: localhost
-      port: 27017
-      database: shopping
+      uri: "mongodb+srv://ajibade:6EdW83CNYdey7yt0@nasacluster.yfmahhj.mongodb.net/products?retryWrites=true&w=majority"
