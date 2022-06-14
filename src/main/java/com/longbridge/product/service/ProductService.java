@@ -2,11 +2,13 @@ package com.longbridge.product.service;
 
 import com.longbridge.product.ProductRepository;
 import com.longbridge.product.dto.Product;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Slf4j
 @Service
 public class ProductService {
 
@@ -18,6 +20,7 @@ public class ProductService {
 
     List<Product> products = new ArrayList<>();
     public String addProduct(Product product) {
+        log.info("adding product");
         productRepository.save(product);
         return "success";
     }

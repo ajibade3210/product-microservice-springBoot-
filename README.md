@@ -4,11 +4,11 @@ Creating The DTO Folder?
 
 DTO --> Contains the Entity
 
-The It is Used (Modified) By the Service section.
+The Entity, It is Used (Modified) By the Service section.
 
 service section mthod is called by the 
 
-Cntroller
+Controller
 
 DTO --> Service --> Controller
 
@@ -32,4 +32,6 @@ DTO --interfaced--> Repository -->  Service --> Controller
 
 - Next Import into service section
 `private ProductRepository productRepository`
-And Replace the logic using DB `MongoRepository` queries now.
+And Replace the logic using DB `MongoRepository` queries now...
+
+### Using Lombok

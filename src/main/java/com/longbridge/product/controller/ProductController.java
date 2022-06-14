@@ -2,6 +2,7 @@ package com.longbridge.product.controller;
 
 import com.longbridge.product.dto.Product;
 import com.longbridge.product.service.ProductService;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -10,11 +11,13 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@Slf4j
 @RestController
 @RequestMapping("/v1/product")
 public class ProductController {
 
-   private static final Logger logger = LoggerFactory.getLogger(ProductController.class);
+    //Replace By Slf4j
+   //private static final Logger logger = LoggerFactory.getLogger(ProductController.class);
     private ProductService productService;
 
 //    You can use the below code or Autowire above productservice declaration above
@@ -25,7 +28,7 @@ public class ProductController {
     @PostMapping("/save")
     ResponseEntity<Product> addProduct(@RequestBody Product product) {
        String  status = productService.addProduct(product);
-        logger.info("Product addes status = {}", status);
+        log.info("Product addes status = {}", status);
         return  ResponseEntity.status(HttpStatus.CREATED).body(product);
     }
 
