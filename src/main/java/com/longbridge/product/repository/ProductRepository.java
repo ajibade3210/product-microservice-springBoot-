@@ -1,4 +1,4 @@
-package com.longbridge.product;
+package com.longbridge.product.repository;
 
 
 import com.longbridge.product.dto.Product;
@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface ProductRepository extends MongoRepository<Product, Integer> {
+public interface ProductRepository extends MongoRepository<Product, String> {
 
     //Custom queries can esily be created using respository.
     //Using the @Query to create implementation at run time.

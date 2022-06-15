@@ -7,3 +7,10 @@ spring:
   data:
     mongodb:
       uri: "mongodb+srv://ajibade:6EdW83CNYdey7yt0@nasacluster.yfmahhj.mongodb.net/products?retryWrites=true&w=majority"
+
+product:
+  currencies:
+    - INR
+    - USD
+    - EUR
+    - NG
